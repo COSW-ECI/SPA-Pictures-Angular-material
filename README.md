@@ -16,10 +16,12 @@ __Parte I. Backend.__
 1.  En el pom.xml agregue el siguiente repositorio de dependencias (el cual contiene la librería requerida):
 
 	```
-        <repository>
-            <id>ECI internal repository</id>
-            <url>http://profesores.is.escuelaing.edu.co/hcadavid/mvnmirror</url>
-        </repository>
+	<repositories>
+	        <repository>
+	            <id>ECI internal repository</id>
+	            <url>http://profesores.is.escuelaing.edu.co/hcadavid/mvnmirror</url>
+	        </repository>
+	</repositories>
 ```
 
 2.  En el mismo archivo, agregue la siguiente dependencia:
