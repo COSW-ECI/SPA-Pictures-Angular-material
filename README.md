@@ -71,12 +71,13 @@ __Parte I. Backend.__
 	* Para que un recurso REST tenga una representación diferente a la estándar (JSON), en particular un archivo, el método correspondiente del controlador REST debe retornar algo de tipo:
 
 	```
-	ResponseEntityInputStreamResource
+	ResponseEntity<InputStreamResource>
 	
 	```
 
 	Con lo anterior, el controlador puede construir la respuesta (en este caso con una imagen), usando la clase ResponseEntity:	
-	```		ResponseEntity.ok().contentType(MediaType.parseMediaType("image/jpg")).body(new InputStreamResource(EL_INPUT_STREAM_DE_LA_IMAGEN));
+	```		
+	ResponseEntity.ok().contentType(MediaType.parseMediaType("image/jpg")).body(new InputStreamResource(EL_INPUT_STREAM_DE_LA_IMAGEN));
 	```
 	
 	Y en caso de error (por ejemplo si no se puede consultar la imagen), retornar un objeto ResponseEntity vacío que tenga el código NOT_FOUND de HTTP:
