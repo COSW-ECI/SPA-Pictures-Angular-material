@@ -23,8 +23,18 @@ __Parte I. Backend.__
 	        </repository>
 	</repositories>
 ```
+1.1. Si utiliza gradle agregue la dependencia al builg.gradle (app)
 
-2.  En el mismo archivo, agregue la siguiente dependencia:
+	```
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+		maven { url "http://profesores.is.escuelaing.edu.co/hcadavid/mvnmirror" }
+	}
+```
+
+2. En el mismo archivo, agregue la siguiente dependencia:
 
 	```
         <dependency>
@@ -33,7 +43,15 @@ __Parte I. Backend.__
             <version>1.0</version>            
         </dependency>  
 	```
- 
+2.2. Si utiliza Gradle agregue la dependencia al builg.gradle (app)
+	```
+	dependencies {
+		compile('org.springframework.boot:spring-boot-starter-security')
+		compile('org.springframework.boot:spring-boot-starter-web')
+		compile('edu2.eci.cosw.stubs:FakeClientsLibrary:1.0')
+		testCompile('org.springframework.boot:spring-boot-starter-test')
+	}
+	```
 3. Cree un API REST para el recurso 'clientes', de manera que maneje las URIs:
 	* /clients   <- obtiene todos los clientes
 	* /clients/{id}  <- obtiene un cliente en particular
