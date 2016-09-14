@@ -94,11 +94,11 @@ __Parte II. Front-end.__
 
 	```	
   "dependencies": {
-    "angular": "~1.5.0",
-    "angular-route": "~1.5.0",
-    "angular-resource": "~1.5.0",
-    "angular-material":"~1.0.5",
-    "bootstrap-css-only": "~3.3.6"
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-material": "^1.1.1"
+    "bootstrap-css-only": "^3.3.6"
   }
 	```	
 2. Rectifique en en la página html raíz se esté importando el estilo de angular-material (esto va en la sección <head> de la página). Si hay referencias a otros estilos que no se usen (por ejemplo "html5-boilerplate") elimínelos). 
